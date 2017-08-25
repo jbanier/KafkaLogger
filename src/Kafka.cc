@@ -333,7 +333,7 @@ bool KafkaWriter::DoWrite(int num_fields, const Field* const * fields, Value** v
     											NULL);
     if (resp != RdKafka::ERR_NO_ERROR) {
         errstr = RdKafka::err2str(resp);
-        reporter->Error("Produce failed: %s", (errstr != null && errstr.c_str() != null ? errstr.c_str() : "null"));
+        reporter->Error("Produce failed: %s", (errstr != NULL && errstr.c_str() != NULL ? errstr.c_str() : "null"));
         reporter->Error("failed line: %s", bytes);
     }
 
